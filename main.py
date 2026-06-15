@@ -1,3 +1,11 @@
+from enum import Enum
+
+class State(Enum):
+    IDLE      = "idle"
+    PIN       = "pin"
+    ACCOUNT   = "account"
+    MONEY_JOB = "money_job"
+
 class ATM_Error():
     pass
 
@@ -25,6 +33,32 @@ class Bank():
     def deposit(self, account_id)->bool:
         return
 
+class ATM():
+    def __init__(self, bank, bin):
+        self.bank        = bank
+        self.bin         = bin
+        self.state       = State.IDLE
+        self.card_id     = None
+        self.accounts    = []
+        self.cur_account = None
 
+    def insert_card():
+        return 
+    
+    def check_pin():
+        return
+
+    def get_accounts():
+        return
+
+    def withdraw():
+        return
+    
+    def deposit():
+        return
+    
+    def out_card():
+        return
+    
 if __name__ == "__main__":
     print('bear test')
